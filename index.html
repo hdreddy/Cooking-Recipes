@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guiness Book of Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guiness Book of Recipes</h1>
+    </header>
+    <main>
+        <section id="recipe-form-section">
+            <h2>Add a New Recipe</h2>
+            <form id="recipe-form">
+                <label for="cover-image">Upload Main Cover Image:</label>
+                <input type="file" id="cover-image" accept="image/*" required />
+
+                <label for="video-upload">Upload Video (Optional):</label>
+                <input type="file" id="video-upload" accept="video/*" />
+
+                <label for="video-url">Or Enter Video URL (Optional):</label>
+                <input type="url" id="video-url" placeholder="Enter video URL" />
+
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" placeholder="Enter recipe name" required />
+
+                <label for="ingredients">Ingredients:</label>
+                <div id="ingredients-container">
+                    <div class="ingredient-item">
+                        <input type="text" class="ingredient" placeholder="Enter ingredient" required />
+                    </div>
+                </div>
+                <button type="button" id="add-ingredient-btn">Add Ingredient</button>
+
+                <label for="preparation">Mode of Preparation:</label>
+                <div id="preparation-container">
+                    <div class="preparation-step">
+                        <input type="text" class="preparation" placeholder="Enter preparation step" required />
+                    </div>
+                </div>
+                <button type="button" id="add-step-btn">Add Preparation Step</button>
+
+                <button type="submit">Submit Recipe</button>
+            </form>
+        </section>
+
+        <section id="recipes-list">
+            <h2>Recipes</h2>
+            <div id="recipes-container" class="grid-layout"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
